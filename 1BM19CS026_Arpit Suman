@@ -1,0 +1,50 @@
+1. Adding two 8 bit numbers
+.model small
+.data
+a db 14
+b db 21
+c db ?
+.code
+mov ax,@data
+mov ds,ax
+mov al,a
+add al,b
+mov c,al
+mov ah,4ch
+int 21h
+end
+
+2. Adding two 16 bit numbers
+.model small
+.data
+a dw 1234
+b dw 5678
+c dw ?
+.code
+mov ax,@data
+mov ds,ax
+mov ax,a
+add ax,b
+mov c,ax
+mov ah,4ch
+int 21h
+end
+
+3. Adding four 8 bit numbers
+.model small
+.data
+a db 12
+b db 25
+c db 14
+d db 08
+.code
+mov ax,@data
+mov ds,ax
+mov al,a
+add al,b
+add al,c
+add al,d
+mov a,al
+mov ah,4ch
+int 21h
+end
